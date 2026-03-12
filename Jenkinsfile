@@ -8,12 +8,6 @@ pipeline {
             }
         }
 
-        stage('Start Minikube') {
-            steps {
-                bat 'minikube start'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t flask-cicd-app:latest .'
